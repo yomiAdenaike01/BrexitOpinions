@@ -38,7 +38,7 @@ socket.on("stream",tweets=>{
         allTweets.push(tweets);
     }
     //Remove the loader
-    document.querySelector(".loader").style.display = "none";        
+    document.querySelector(".lds-ring").style.display = "none";        
 });
 
 /**
