@@ -60,6 +60,7 @@ socket.on("stream:destroy",()=>socket.disconnect())
  * @param {*} tweets 
  */
 var AnalyzeTweet = (tweets) =>{
+    console.log(tweets);
     semanticScore = 0;
     const tweetText = tweets.text;
     const words = tweetText.split(/\W/);
