@@ -22,7 +22,7 @@ body{
     padding: 1rem;
 }
 
-.button-wrapper{
+.stream-controls{
     background: whitesmoke;
     border-radius: 60px;
     /* max-width: 100px; */
@@ -37,7 +37,7 @@ body{
     margin-top: 20px;
  
 }
-.button-wrapper span{
+.stream-controls span{
     color: #777;
     font-size: 13px;
 }
@@ -199,4 +199,48 @@ body{
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+
+
+/*Slider styles*/
+.slider{
+    min-width: 230px;
+}
+input[type="range"]{
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    background: transparent; /* Otherwise white in Chrome */
+    margin: 0 10px  0 10px;
+}
+input[type="range"]:focus{
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    outline:none;
+    border:none;
+    background: white;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    margin-top: -3px;
+    box-shadow: 0px 0px 10px #999;
+   
+}
+
+input[type="range"]::-webkit-slider-runnable-track{
+    background: #ccc;
+    height: 3px;
+    width: 100%;
+    transition: .56s ease all;
+
+}
+input[type="range"]:focus::-webkit-slider-runnable-track{
+    background: #777;
+    outline: none;
+    border: none;
+}
+input[type="range"]:focus::-webkit-slider-thumb{
+    border: none;
+    outline: none;
 }

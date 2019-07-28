@@ -26,8 +26,9 @@ io.sockets.on("disconnect",(socket)=>{console.log("Hello")});
 client.stream('statuses/filter', {track: 'brexit'},function(stream){
     //Display the tweets every second
     stream.on('data', function(tweets) {
-        console.log("Sending Streams");
-        tweetsArray.push(tweets);
+        // console.log("Sending Streams");
+        // tweetsArray.push(tweets);
+        io.sockets.emit("stream",tweets)
     });
     stream.on('end',res=>{
         io.sockets.emit("stream:destroy");
@@ -55,7 +56,7 @@ setInterval(()=>{
     if(tweetsArray.length != 0){
         var tweet = tweetsArray.shift();
         if(tweet){
-            io.sockets.emit("stream",tweet);
+            ;
         }
     }
   },1000)

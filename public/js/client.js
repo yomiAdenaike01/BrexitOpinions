@@ -1,6 +1,7 @@
 //Set the score of the value
-let semanticData,semanticScore = 0, matchedWords = [],totalScore = 0;
-
+let semanticData,semanticScore = 0, matchedWords = [],totalScore = 0, allTweets=[];
+var timerId = null;
+var delay = 1000;
 //Create the scoring element 
 var scoreElement = document.createElement("p");
 scoreElement.classList.add("score-element");
@@ -19,7 +20,6 @@ const emojis = {
     v_hate:"🤬"
 }
 
-
 //Fetch the semantic analysis values 
 fetch("/text")
 .then(res=>res.json())
@@ -27,15 +27,53 @@ fetch("/text")
     semanticData = data
 });
 
-//Listen for the stream data
+
+/**
+ * Listen to the stream of data
+ * Push the tweets to an array to be used lated
+ */
 var socket = io.connect("/");
 socket.on("stream",tweets=>{
     if(tweets != null){
-        AnalyzeTweet(tweets);
+        allTweets.push(tweets);
     }
     //Remove the loader
     document.querySelector(".loader").style.display = "none";        
 });
+
+/**
+ * Analyze and display tweets every second by default
+ */
+timerId = setInterval(function(){ 
+    var tweet = allTweets.shift();
+    if(tweet){
+       AnalyzeTweet(tweet);
+    }
+    
+  }, 1000);
+
+/**
+ * Control the stream of the tweets with a change event on the slider
+ * Multiply the slider by 1000 by seconds
+ */
+var ControlStream = () =>{
+    var elem = document.querySelector('input[type="range"]');
+    elem.addEventListener("input", ()=>{
+        clearInterval(timerId);
+        delay = elem.value*1000;
+        timerId = setInterval(function(){ 
+            var tweet = allTweets.shift();
+            if(tweet){
+            AnalyzeTweet(tweet);
+            }
+            
+        }, delay);
+    });
+}
+
+
+ControlStream();
+
 
 
 //Button listener to stop the stream
