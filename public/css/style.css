@@ -30,7 +30,7 @@ body{
     /* flex-direction: column; */
     align-items: center;
     /* justify-content: center; */
-    max-width: 26%;
+    max-width: 210px;
     padding: 5px 10px 5px 1rem;
     font-weight: bold;
     /* min-height: 100vh; */
