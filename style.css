@@ -1,0 +1,6 @@
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=6bab4c77-b26f-4801-a984-4d992cb45c0b");
+    @font-face{
+        font-family:"Agmena W01 Book";
+        src:url("Fonts/7bee4505-5138-4673-afa2-9ba11baaca02.eot?#iefix");
+        src:url("Fonts/7bee4505-5138-4673-afa2-9ba11baaca02.eot?#iefix") format("eot"),url("Fonts/77c2e9a6-7157-4bfd-9c6e-2b77b47fd200.woff2") format("woff2"),url("Fonts/4a4c3bb2-ed0e-49b2-82b5-595aa74e0704.woff") format("woff"),url("Fonts/45aadb5e-6ec3-4486-914e-93421a9be0b3.ttf") format("truetype");
+    }

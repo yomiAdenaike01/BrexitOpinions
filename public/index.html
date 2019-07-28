@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Tweet Bot</title>
+
+
+<div class="main-title">
+    <h1>Brexit Tweets</h1>
+    <p class="lead">Streaming Tweets about Brexit and running semnatic analysis on them to determine whether they are <strong>positive, negative and neutral</strong><strong>.</strong></p>
+    <div class="button-wrapper">
+    <button class="resumeStream stream-button" title="Resume Stream"><i class="fas fa-play"></i></button>
+    <button class="stopStream stream-button" title="Pause Stream"><i class="fas fa-pause"></i></button>
+</div>
+
+</div>
+    <!-- Loading Element  -->
+    <div class="loading-container">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+    <!-- Tweet Container displaying the tweets -->
+    <div class="tweet-container">
+
+    </div>
+
+</head>
+<body>
+</body>
+ <script src="./moment.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+<script src="https://kit.fontawesome.com/3b7512b083.js"></script>
+
+<script src="client.js"></script>
+</html>

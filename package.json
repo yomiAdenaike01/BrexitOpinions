@@ -1,0 +1,23 @@
+{
+  "name": "tweetanalysis",
+  "version": "1.0.0",
+  "description": "An web app that searches for UK Tweets posted in the last day which are about Brexit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0",
+    "twitter": "^1.7.1"
+  }
+}
