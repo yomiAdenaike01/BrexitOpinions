@@ -22,8 +22,9 @@ At times some words are not present in the AFINN-111 the database used to match 
 - ✅ Display the Tweets on a web page with a smiley next to each Tweet to indicate the sentiment choice your application has made.
 
 - ✅ Update the page in real-time, via AJAX (jQuery is acceptable), with new Tweets.
+- ✅ Control the speed of the Tweets coming in.
 - ✅ Display the overall sentiment for the Tweets.
-- ✅ Host this on your p1ersonal web space and provide us with a link and the source.
+- ✅ Host this on your personal web space and provide us with a link and the source.
 - ✅ Pause Tweet Stream.
 - ✅ Refactor Code.
 
