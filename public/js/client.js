@@ -128,12 +128,15 @@ var AnalyzeTweet = (tweets) =>{
         tweetTextAndProfileWrapper = document.createElement("div");
 
 
-        //Add classes
+        //Set attributes
         tweetWrapper.classList.add("tweet-wrapper");
         tweetNameContainer.classList.add("tweet-name"),
         tweetDateContainer.classList.add("tweet-date"),
         tweetUserNameContainer.classList.add("tweet-user-name"),
         tweetSemanticValueContainer.classList.add("tweet-semantic-value"),
+        tweetSemanticValueContainer.classList.add("hint--bottom"),
+        tweetSemanticValueContainer.setAttribute("aria-label","Semantic Score: "+tweet.semanticValue)
+
         tweetTextContainer.classList.add("tweet-text");
         tweetProfilePictureContainer.classList.add("tweet-profile-picture");
         tweetNameAndDateWrapper.classList.add("tweet-name-date-wrapper");
@@ -152,7 +155,8 @@ var AnalyzeTweet = (tweets) =>{
         tweetProfilePictureContainer.style.backgroundPosition="center";
         
         //Semantic conditionals
-         if(tweet.semanticValue == 0){
+        if(tweet.semanticValue != undefined){ 
+        if(tweet.semanticValue == 0){
             tweetSemanticValueContainer.textContent = emojis.nuetral;
         }else if(tweet.semanticValue < 0){
             tweetSemanticValueContainer.textContent = emojis.low_unhappy;
@@ -163,6 +167,10 @@ var AnalyzeTweet = (tweets) =>{
         }else if(tweet.semanticValue > 5){
             tweetSemanticValueContainer.textContent = emojis.v_happy;
         }
+    }else{
+        tweetSemanticValueContainer.textContent = "❔";
+    }
+        
         
         //Append the elements 
         tweetTextAndProfileWrapper.appendChild(tweetProfilePictureContainer);
