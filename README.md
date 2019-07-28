@@ -34,7 +34,7 @@ At times some words are not present in the AFINN-111 the database used to match 
 - Updating the semantic values file. 
 - Publish on AWS EC2 Server.
 - Re-develop using TDD, CI & CD.
-- Add more controls (stream speed, filter)
+- ✅ Add more controls (stream speed).
 - Publish report after a certain amount of time to display the most found words and overall opinion.
 
 
