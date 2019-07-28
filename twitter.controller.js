@@ -1,8 +1,6 @@
 var keyStore = require("./keys"),
 Twitter = require("twitter");
 
-//Create stream and arary to control the speed of the stream
-let twitterStream, tweetsArray = [];
 module.exports = (app, io) => {
   //Init twitter lib
 var client = new Twitter({
@@ -12,9 +10,8 @@ var client = new Twitter({
     access_token_secret: keyStore.keys.ACCESS_TOKEN_SECRET
   });
 
-let mainSocket;
+
 io.sockets.on("connection",(socket)=>{
-    mainSocket = socket;
     console.log("Connection Established!");
 })
 
@@ -26,8 +23,6 @@ io.sockets.on("disconnect",(socket)=>{console.log("Hello")});
 client.stream('statuses/filter', {track: 'brexit'},function(stream){
     //Display the tweets every second
     stream.on('data', function(tweets) {
-        // console.log("Sending Streams");
-        // tweetsArray.push(tweets);
         io.sockets.emit("stream",tweets)
     });
     stream.on('end',res=>{
@@ -49,15 +44,5 @@ app.post("/resume",(req,res)=>{
     io.sockets.emit("stream:resume");
  
 })
-/**
- * Send the tweets every second
- */
-setInterval(()=>{
-    if(tweetsArray.length != 0){
-        var tweet = tweetsArray.shift();
-        if(tweet){
-            ;
-        }
-    }
-  },1000)
+
 }
