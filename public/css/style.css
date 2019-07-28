@@ -22,9 +22,23 @@ body{
     padding: 1rem;
 }
 
+.button-wrapper{
+    background: whitesmoke;
+    border-radius: 60px;
+    /* max-width: 100px; */
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: center; */
+    max-width: 26%;
+    padding: 5px 10px 5px 1rem;
+    font-weight: bold;
+    /* min-height: 100vh; */
+    margin-top: 20px;
+ 
+}
 .button-wrapper span{
     color: #777;
-
     font-size: 13px;
 }
 .stream-button{
@@ -34,11 +48,10 @@ body{
     outline:none;
     border-radius: 50%;
     padding:0.5rem 0.7rem;
-    margin-top: 10px;
+   
     transition: .56s ease all;
     font-family: "Lato",sans-serif;
-  
-    margin-bottom: 20px;
+
     font-size: 10px;
     margin-left: 10px;
 
