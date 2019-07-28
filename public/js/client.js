@@ -70,22 +70,8 @@ var ControlStream = () =>{
         }, delay);
     });
 }
-
-
 ControlStream();
 
-
-
-//Button listener to stop the stream
-document.querySelector(".stopStream").addEventListener("click",()=>{
-    fetch("/pause",{method:"POST"})
-})
-
-//Button listener to stop the stream
-document.querySelector(".resumeStream").addEventListener("click",()=>{
-    location.reload();
-})
-socket.on("stream:destroy",()=>socket.disconnect())
 // socket.on("stream:resume",()=>socket.connect());
 
 /**

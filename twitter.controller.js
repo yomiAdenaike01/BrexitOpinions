@@ -35,14 +35,4 @@ client.stream('statuses/filter', {track: 'brexit'},function(stream){
     twitterStream = stream;
 });
 
-//Handle request to close the stream
-app.post("/pause",(req,res)=>{
-    io.sockets.emit("stream:destroy");
-});
-
-app.post("/resume",(req,res)=>{
-    io.sockets.emit("stream:resume");
- 
-})
-
 }
