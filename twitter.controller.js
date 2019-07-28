@@ -23,6 +23,7 @@ io.sockets.on("disconnect",(socket)=>{console.log("Hello")});
 client.stream('statuses/filter', {track: 'brexit'},function(stream){
     //Display the tweets every second
     stream.on('data', function(tweets) {
+        console.log("Sending stream");
         io.sockets.emit("stream",tweets)
     });
     stream.on('end',res=>{
