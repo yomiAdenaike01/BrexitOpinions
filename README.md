@@ -28,4 +28,13 @@ At times some words are not present in the AFINN-111 the database used to match 
 - ✅ Pause Tweet Stream.
 - ✅ Refactor Code.
 
+# Future Content
+- Resume twitter stream after pause.
+- Add notifications for pausing and resuming the stream. 
+- Updating the semantic values file. 
+- Publish on AWS EC2 Server.
+- Re-develop using TDD, CI & CD.
+- Add more controls (stream speed, filter)
+- Publish report after a certain amount of time to display the most found words and overall opinion.
+
 
