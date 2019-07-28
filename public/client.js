@@ -34,7 +34,7 @@ socket.on("stream",tweets=>{
         AnalyzeTweet(tweets);
     }
     //Remove the loader
-    document.querySelector(".spinner").style.display = "none";        
+    document.querySelector(".loader").style.display = "none";        
 });
 
 
