@@ -169,6 +169,7 @@ var AnalyzeTweet = (tweets) =>{
         }
     }else{
         tweetSemanticValueContainer.textContent = "❔";
+        tweetSemanticValueContainer.setAttribute("aria-label","No Data Found");
     }
         
         

@@ -21,9 +21,10 @@ body{
     text-align: center;
     padding: 1rem;
 }
+
 .button-wrapper span{
     color: #777;
-    font-family: "Montserrat",sans-serif;
+
     font-size: 13px;
 }
 .stream-button{
@@ -36,15 +37,14 @@ body{
     margin-top: 10px;
     transition: .56s ease all;
     font-family: "Lato",sans-serif;
-    border: 2px solid #777;
+  
     margin-bottom: 20px;
     font-size: 10px;
     margin-left: 10px;
 
 }
 .stream-button:hover{
-    background: #777;
-    border: 2px solid #777;
+    background: #ccc;
     color: #fff;
     cursor: pointer;
 }
@@ -59,7 +59,7 @@ body{
     margin: 0;
     padding:0;
     text-transform: uppercase;
-    letter-spacing: 3px;
+
     margin-bottom: 0.5rem;
 }
 
